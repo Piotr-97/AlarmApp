@@ -18,5 +18,21 @@ public class Lawyer {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "firstname")
+    private String firstname;
+
+    @Column(name = "lastname")
+    private String lastname;
+
+    @Column(name = "position")
+    private String position;
+
+    @Column(name = "phonenumber")
+    private String phonenumber;
+
+    @Column(name = "email")
+    private String email;
+
+
 
 }
