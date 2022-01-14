@@ -1,4 +1,20 @@
 package com.example.demo.repo.entity;
 
-public class Client {
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@MappedSuperclass
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public abstract class Client {
+
+    @Id
+    private Long id;
+
+
 }
