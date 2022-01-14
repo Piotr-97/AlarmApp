@@ -2,14 +2,17 @@ package com.example.demo.repo.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Data
 @Table(name = "lawyer")
 public class Lawyer {
 
@@ -33,6 +36,8 @@ public class Lawyer {
     @Column(name = "email")
     private String email;
 
+
+    //private ArrayList<Lawyer> group;
 
 
 }
