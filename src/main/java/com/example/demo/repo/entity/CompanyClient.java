@@ -1,4 +1,7 @@
 package com.example.demo.repo.entity;
 
-public class CompanyClient {
+import javax.persistence.Entity;
+
+@Entity
+public class CompanyClient  extends Client{
 }
