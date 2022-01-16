@@ -11,15 +11,19 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-public abstract class Client {
+@Entity(name = "client")
+public class Client {
 
     @Id
+    @Column(name = "id")
     private Long id;
 
     @OneToOne
     @JoinColumn(name = "address_id",nullable = false)
     private Address address;
+
+    @Column(name = "name")
+    private String name;
 
 
 }
