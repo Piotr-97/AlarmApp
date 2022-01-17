@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 
@@ -34,6 +35,12 @@ public class Lawyer {
 
     @Column(name = "email")
     private String email;
+
+    @Column(name = "manager")
+    @OneToOne(cascade = CascadeType.ALL)
+    @Nullable
+    private Lawyer manager;
+
 
 
     //private ArrayList<Lawyer> group;
