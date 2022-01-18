@@ -33,4 +33,7 @@ public class Address {
     @Column(name = "zipcode")
     private String zipcode;
 
+    @Column(name = "city")
+    private String city;
+
 }

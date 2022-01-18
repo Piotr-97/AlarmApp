@@ -36,14 +36,9 @@ public class Lawyer {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "manager")
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @Nullable
+    @JoinColumn(name = "lawyer_id")
     private Lawyer manager;
-
-
-
-    //private ArrayList<Lawyer> group;
-
 
 }

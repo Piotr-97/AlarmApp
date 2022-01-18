@@ -22,8 +22,4 @@ public class Checklist {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "tasks")
-    @OneToMany
-    @JoinColumn(name = "task_id")
-    private ArrayList<Task> tasks;
 }
