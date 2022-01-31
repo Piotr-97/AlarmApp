@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,6 +21,11 @@ public class Task {
     @Column(name = "id")
     private Long id;
 
+
+
+
+    @ManyToMany(mappedBy = "tasks")
+    private List<Checklist> checklists;
 
 
 }

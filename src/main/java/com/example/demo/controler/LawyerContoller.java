@@ -1,7 +1,6 @@
 package com.example.demo.controler;
 
 
-import com.example.demo.repo.LawyerRepository;
 import com.example.demo.repo.entity.Lawyer;
 import com.example.demo.service.LawyerService;
 import lombok.AllArgsConstructor;
