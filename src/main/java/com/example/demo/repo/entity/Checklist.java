@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 
 @NoArgsConstructor
@@ -23,7 +23,9 @@ public class Checklist {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "name")
+    private String name;
 
     @ManyToMany
-    private List<Task> tasks;
+    private Set<Task> tasks;
 }
