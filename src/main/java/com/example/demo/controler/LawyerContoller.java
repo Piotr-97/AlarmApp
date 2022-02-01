@@ -1,6 +1,7 @@
 package com.example.demo.controler;
 
 
+import com.example.demo.dto.LawyerResponse;
 import com.example.demo.repo.entity.Lawyer;
 import com.example.demo.service.LawyerService;
 import lombok.AllArgsConstructor;
@@ -17,7 +18,7 @@ public class LawyerContoller {
 
 
     @GetMapping("/lawyers")
-    public List<Lawyer> getLawyers(){
+    public List<LawyerResponse> getLawyers(){
         return lawyerService.getAllLawyers();
     }
 
