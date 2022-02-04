@@ -43,7 +43,7 @@ public class Lawyer {
     private Lawyer manager;
 
     @ManyToMany
-    private Set<Client> lawyersClietns;
+    private Set<Client> clients;
 
 
 
