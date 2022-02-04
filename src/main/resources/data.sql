@@ -1,3 +1,4 @@
+/*
 INSERT INTO address(id,street,apartmentnumber,zipcode,city)
 values ( 1,'11 Listopada','12','00-928','Warszawa');
 INSERT INTO address(id,street,apartmentnumber,zipcode,city)
@@ -36,3 +37,4 @@ VALUES ( 5,'Magdalena', 'Kuchar','Junior','123456789','michalkuch@email.com' );
 insert into lawyer(id,firstname,lastname,position,phonenumber,email)
 VALUES ( 6,'Jan', 'Kuchar','Junior','123456789','michalkuch@email.com' );
 
+*/

@@ -4,10 +4,12 @@ package com.example.demo.repo.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
+import java.util.Set;
 
-@MappedSuperclass
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,6 +27,9 @@ public class Client {
 
     @Column(name = "name")
     private String name;
+
+    @ManyToMany(fetch = FetchType.LAZY,mappedBy = "lawyersClietns")
+    private Set<Lawyer> lawyers;
 
 
 }

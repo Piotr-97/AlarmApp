@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
@@ -40,5 +41,10 @@ public class Lawyer {
     @Nullable
     @JoinColumn(name = "lawyer_id")
     private Lawyer manager;
+
+    @ManyToMany
+    private Set<Client> lawyersClietns;
+
+
 
 }

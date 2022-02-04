@@ -9,6 +9,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -16,6 +17,7 @@ public class LawyerService {
 
     private final LawyerRepository lawyerRepository;
     private final ModelMapper modelMapper;
+
 
     public List<LawyerResponse> getAllLawyers(){
      List<Lawyer> lawyers = lawyerRepository.findAll();
