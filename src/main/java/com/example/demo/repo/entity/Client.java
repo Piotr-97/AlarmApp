@@ -1,14 +1,10 @@
 package com.example.demo.repo.entity;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.lang.Nullable;
-
 import javax.persistence.*;
 import java.util.Set;
-
 
 @Data
 @AllArgsConstructor
@@ -28,7 +24,7 @@ public class Client {
     @Column(name = "name")
     private String name;
 
-    @ManyToMany(fetch = FetchType.LAZY,mappedBy = "clients")
+    @ManyToMany(mappedBy = "clients")
     private Set<Lawyer> lawyers;
 
 

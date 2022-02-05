@@ -28,8 +28,9 @@ public class Lawyer {
     @Column(name = "lastname")
     private String lastname;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "position")
-    private String position;
+    private PositionEnum position;
 
     @Column(name = "phonenumber")
     private String phonenumber;
