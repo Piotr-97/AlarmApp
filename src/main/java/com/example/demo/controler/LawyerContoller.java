@@ -7,12 +7,14 @@ import com.example.demo.repo.LawyerRepository;
 import com.example.demo.repo.entity.Lawyer;
 import com.example.demo.service.LawyerService;
 import lombok.AllArgsConstructor;
+import lombok.extern.java.Log;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.function.EntityResponse;
 
 import javax.validation.Valid;
 import java.util.HashMap;
@@ -50,6 +52,18 @@ public class LawyerContoller {
         Lawyer newLawyer = modelMapper.map(lawyer,Lawyer.class);
         lawyerRepository.save(newLawyer);
     }
+
+    @DeleteMapping("/address/{id}")
+    public ResponseEntity<?> deleteLawyer(@PathVariable Long id){
+        if(lawyerRepository.findById(id).isPresent()){
+            lawyerRepository.deleteById(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        else{
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
 
 
 
