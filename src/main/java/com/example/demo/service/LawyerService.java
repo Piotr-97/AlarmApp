@@ -31,6 +31,33 @@ public class LawyerService {
     }
 
 
+    public boolean update (Long id, Lawyer updatedlawyer){
+        Optional<Lawyer> currentLawyer = lawyerRepository.findById(id);
+        if(currentLawyer.isPresent()){
+            Lawyer newLawyer = currentLawyer.get();
+            if(updatedlawyer.getFirstname() !=null)
+                    newLawyer.setFirstname(updatedlawyer.getFirstname());
+            if(updatedlawyer.getLastname() != null)
+                    newLawyer.setLastname(updatedlawyer.getLastname());
+            if(updatedlawyer.getEmail() !=null)
+                    newLawyer.setEmail(updatedlawyer.getEmail());
+            if(updatedlawyer.getClients() !=null)
+                    newLawyer.setClients(updatedlawyer.getClients());
+            if(updatedlawyer.getManager() != null)
+                    newLawyer.setManager(updatedlawyer.getManager());
+            if(updatedlawyer.getPhonenumber() != null)
+                    newLawyer.setPhonenumber(updatedlawyer.getPhonenumber());
+            if(updatedlawyer.getPosition() != null)
+                    newLawyer.setPosition(updatedlawyer.getPosition());
+
+            newLawyer.setId(id);
+            lawyerRepository.save(newLawyer);
+            return true;
+        }
+        return false;
+    }
+
+
 
 
 
