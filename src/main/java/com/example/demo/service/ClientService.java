@@ -20,7 +20,7 @@ public class ClientService {
 
 
    public List<Lawyer> getClientlawyers(@RequestParam Long id){
-        return clientRepository.findAllLawyerByClient(id);
+        return null; //clientRepository.findAllLawyerByClient(id);
    }
 
 }

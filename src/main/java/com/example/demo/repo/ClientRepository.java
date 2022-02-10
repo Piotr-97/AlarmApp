@@ -11,9 +11,6 @@ public interface ClientRepository extends JpaRepository<Client,Long> {
 
 
 
-    @Query(value = "select lawyers from Client c where c.id = ?1 ",nativeQuery = true)
-    List<Lawyer> findAllLawyerByClient(Long id);
-
 
 
 }
