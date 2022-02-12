@@ -22,10 +22,7 @@ public class ClientController {
     private final ModelMapper modelMapper;
 
 
-    @GetMapping("/Clientlawyers/{id}")
-    public List<Lawyer> getClientLawyers(@RequestParam Long id){
-        return clientService.getClientlawyers(id);
-    }
+
 
 
 

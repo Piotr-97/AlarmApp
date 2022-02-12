@@ -19,8 +19,6 @@ public class ClientService {
     private final ClientRepository clientRepository;
 
 
-   public List<Lawyer> getClientlawyers(@RequestParam Long id){
-        return null; //clientRepository.findAllLawyerByClient(id);
-   }
+
 
 }
